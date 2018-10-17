@@ -1,0 +1,26 @@
+{
+  "name": "nodecrud",
+  "version": "1.0.0",
+  "description": "Simple Crud with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusGularte/NodeCrud.git"
+  },
+  "keywords": [
+    "node",
+    "crud"
+  ],
+  "author": "Vinicius Gularte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusGularte/NodeCrud/issues"
+  },
+  "homepage": "https://github.com/ViniciusGularte/NodeCrud#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
