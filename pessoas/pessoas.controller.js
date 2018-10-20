@@ -18,7 +18,7 @@ exports.createPessoas = function (req, res, next) {
     })
 }
 
-exports.getHeros = function(req, res, next) {
+exports.getPessoas = function(req, res, next) {
     Pessoas.get({}, function(err, pessoas) {
         if(err) {
             res.json({
@@ -62,7 +62,7 @@ exports.updatePessoa = function(req, res, next) {
 }
 
 exports.removePessoa = function(req, res, next) {
-    Heros.delete({_id: req.params.id}, function(err, pessoa) {
+    Pessoas.delete({_id: req.params.id}, function(err, pessoa) {
         if(err) {
             res.json({
                 error : err
