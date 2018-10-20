@@ -24,5 +24,5 @@ pessoasSchema.statics = {
     }
 }
 
-var pessoasModel = mongoose.model('pessoa', pessoasSchema);
+var pessoasModel = mongoose.model('Pessoas', pessoasSchema);
 module.exports = pessoasModel;

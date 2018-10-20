@@ -14,3 +14,4 @@ var pessoasSchema = new Schema({
 }, {
     timestamps: true
 });
+module.exports = pessoasSchema;

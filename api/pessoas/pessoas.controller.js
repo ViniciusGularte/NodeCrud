@@ -1,20 +1,22 @@
 var Pessoas = require('./pessoas.dao');
 
-exports.createPessoas = function (req, res, next) {
+exports.createPessoa = function (req, res, next) {
     var pessoa = {
         name: req.body.name,
         description: req.body.description
     };
 
-    Pessoas.create(pessoas, function(err, pessoas) {
+    Pessoas.create(pessoa, function(err, pessoa) {
         if(err) {
             res.json({
                 error : err
             })
         }
-        res.json({
-            message : "Pessoa criada com sucesso"
-        })
+        else{
+          res.json({
+              message : "Pessoa criada com sucesso"
+          })
+        }
     })
 }
 
@@ -25,9 +27,11 @@ exports.getPessoas = function(req, res, next) {
                 error: err
             })
         }
-        res.json({
-          pessoas: pessoas
-        })
+        else{
+          res.json({
+            pessoas: pessoas
+          })
+        }
     })
 }
 
@@ -38,9 +42,11 @@ exports.getPessoa = function(req, res, next) {
                 error: err
             })
         }
-        res.json({
-            pessoas: pessoas
-        })
+        else{
+          res.json({
+              pessoas: pessoas
+          })
+        }
     })
 }
 
@@ -55,9 +61,11 @@ exports.updatePessoa = function(req, res, next) {
                 error : err
             })
         }
-        res.json({
-            message : "Pessoa atualizada com sucesso"
-        })
+        else{
+          res.json({
+              message : "Pessoa atualizada com sucesso"
+          })
+        }
     })
 }
 
@@ -68,8 +76,10 @@ exports.removePessoa = function(req, res, next) {
                 error : err
             })
         }
-        res.json({
-            message : "Pessoa deletada com sucesso"
-        })
+        else{
+          res.json({
+              message : "Pessoa deletada com sucesso"
+          })
+        }
     })
 }
